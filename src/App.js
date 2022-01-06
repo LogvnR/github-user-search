@@ -1,13 +1,11 @@
-import logo from "./logo.svg";
-import "./App.css";
+import styles from "./App.modules.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Github User Search App</p>
-      </header>
+    <div className={styles.app}>
+      <nav>NavBar</nav>
+      <header>Search Bar</header>
+      <main>Main Info Section</main>
     </div>
   );
 }
