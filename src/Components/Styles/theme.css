@@ -22,7 +22,6 @@ html {
 :root {
   color-scheme: light;
   --background: var(--bg-light);
-  --white: var(--white);
   --text1: var(--text1-light);
   --text2: var(--text2-light);
   --text3: var(--text3-light);
@@ -34,7 +33,6 @@ html {
   :root {
     color-scheme: dark;
     --background: var(--bg-dark);
-    --white: var(--white);
     --text1: var(--text1-dark);
     --text2: var(--text2-dark);
     --text3: var(--text3-dark);
@@ -46,7 +44,6 @@ html {
 [data-theme="light"] {
   color-scheme: light;
   --background: var(--bg-light);
-  --white: var(--white);
   --text1: var(--text1-light);
   --text2: var(--text2-light);
   --text3: var(--text3-light);
@@ -57,7 +54,6 @@ html {
 [data-theme="dark"] {
   color-scheme: dark;
   --background: var(--bg-dark);
-  --white: var(--white);
   --text1: var(--text1-dark);
   --text2: var(--text2-dark);
   --text3: var(--text3-dark);

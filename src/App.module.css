@@ -1,5 +1,14 @@
 .app {
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   background-color: var(--background);
+}
+
+.app-container {
+  width: 100%;
+  max-width: 750px;
+  box-sizing: border-box;
 }

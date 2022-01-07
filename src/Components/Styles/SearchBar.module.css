@@ -1,0 +1,63 @@
+.container {
+  width: 100%;
+  max-width: 750px;
+  box-sizing: border-box;
+  display: flex;
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+.search-bar {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--white);
+  border-radius: 0.95rem;
+  -webkit-box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.19);
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.19);
+}
+
+.icon {
+  margin-left: 1em;
+  font-size: clamp(13px, 3.6vw, 114px);
+}
+
+.input {
+  width: 100%;
+  font-family: var(--font);
+  font-size: clamp(12px, 3.4vw, 13px);
+  border: none;
+  outline: none;
+  line-height: 25px;
+  color: var(--text2);
+}
+
+.input::placeholder {
+  font-weight: 400;
+  color: var(--text2);
+  opacity: 1;
+}
+
+.input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--text2);
+}
+
+.input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--text2);
+}
+
+.btn {
+  padding: 1em 1.2em;
+  margin: 0.6em 0.6em 0.6em 0;
+  background-color: var(--main);
+  color: var(--white);
+  font-family: var(--font);
+  font-size: clamp(13px, 3.6vw, 14px);
+  font-weight: 700;
+  border: none;
+  border-radius: 0.6rem;
+}
