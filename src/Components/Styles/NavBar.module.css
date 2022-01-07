@@ -1,0 +1,32 @@
+.navbar {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: clamp(24px, 7.2vw, 26px);
+}
+
+.theme-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: clamp(11px, 3.5vw, 13px);
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}

@@ -1,9 +1,10 @@
-import styles from "./App.modules.css";
+import styles from "./App.module.css";
+import NavBar from "./Components/NavBar";
 
 function App() {
   return (
     <div className={styles.app}>
-      <nav>NavBar</nav>
+      <NavBar />
       <header>Search Bar</header>
       <main>Main Info Section</main>
     </div>

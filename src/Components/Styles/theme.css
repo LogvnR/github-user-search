@@ -1,0 +1,66 @@
+html {
+  --main: hsl(212, 100%, 50%);
+  --white: hsl(0, 0%, 100%);
+  --text-inactive: hsla(0, 0%, 100%, 0.5);
+
+  /* = Dark Colors = */
+
+  --bg-dark: hsl(220, 40%, 13%);
+  --text1-dark: hsl(0, 0%, 100%);
+  --text2-dark: hsla(0, 0%, 100%, 0.75);
+  --text3-dark: hsl(0, 0%, 100%);
+  --secondary-dark: hsl(222, 41%, 20%);
+
+  /* = Light Colors = */
+  --bg-light: hsl(227, 100%, 98%);
+  --text1-light: hsl(217, 21%, 21%);
+  --text2-light: hsl(217, 35%, 45%);
+  --text3-light: hsl(217, 20%, 51%);
+  --secondary-light: hsl(0, 0%, 100%);
+}
+
+:root {
+  color-scheme: light;
+  --background: var(--bg-light);
+  --white: var(--white);
+  --text1: var(--text1-light);
+  --text2: var(--text2-light);
+  --text3: var(--text3-light);
+  --secondary: var(--secondary-light);
+  --inactive: var(--text-inactive);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --background: var(--bg-dark);
+    --white: var(--white);
+    --text1: var(--text1-dark);
+    --text2: var(--text2-dark);
+    --text3: var(--text3-dark);
+    --secondary: var(--secondary-dark);
+    --inactive: var(--text-inactive);
+  }
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --background: var(--bg-light);
+  --white: var(--white);
+  --text1: var(--text1-light);
+  --text2: var(--text2-light);
+  --text3: var(--text3-light);
+  --secondary: var(--secondary-light);
+  --inactive: var(--text-inactive);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --background: var(--bg-dark);
+  --white: var(--white);
+  --text1: var(--text1-dark);
+  --text2: var(--text2-dark);
+  --text3: var(--text3-dark);
+  --secondary: var(--secondary-dark);
+  --inactive: var(--text-inactive);
+}
