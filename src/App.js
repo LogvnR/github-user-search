@@ -1,4 +1,6 @@
 import styles from "./App.module.css";
+
+import MainInfo from "./Components/MainInfo";
 import NavBar from "./Components/NavBar";
 import SearchBar from "./Components/SearchBar";
 
@@ -8,7 +10,7 @@ function App() {
       <div className={styles["app-container"]}>
         <NavBar />
         <SearchBar />
-        <main>Main Info Section</main>
+        <MainInfo />
       </div>
     </div>
   );
