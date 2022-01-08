@@ -1,5 +1,10 @@
 import styles from "./Styles/MainInfo.module.css";
 
+import loactionIcon from "../Assets/icon-location.svg";
+import websiteIcon from "../Assets/icon-website.svg";
+import twitterIcon from "../Assets/icon-twitter.svg";
+import companyIcon from "../Assets/icon-company.svg";
+
 const MainInfo = () => {
   return (
     <main className={styles.container}>
@@ -20,34 +25,42 @@ const MainInfo = () => {
         </p>
         <div className={styles["about-container"]}>
           <div className={styles["about-type"]}>
-            <p className={styles["about-title"]}>repos</p>
+            <p className={styles["about-title"]}>Repos</p>
             <p className={styles["about-amount"]}>8</p>
           </div>
           <div className={styles["about-type"]}>
-            <p className={styles["about-title"]}>repos</p>
-            <p className={styles["about-amount"]}>8</p>
+            <p className={styles["about-title"]}>Followers</p>
+            <p className={styles["about-amount"]}>3938</p>
           </div>
           <div className={styles["about-type"]}>
-            <p className={styles["about-title"]}>repos</p>
-            <p className={styles["about-amount"]}>8</p>
+            <p className={styles["about-title"]}>Following</p>
+            <p className={styles["about-amount"]}>9</p>
           </div>
         </div>
         <div className={styles["social-container"]}>
           <div className={styles["social-type"]}>
-            <img src="" alt="" />
-            <p className={styles.location}>San Francisco</p>
+            <div className={styles["icon-container"]}>
+              <img src={loactionIcon} alt="Location" />
+            </div>
+            <p className={styles.type}>San Francisco</p>
           </div>
           <div className={styles["social-type"]}>
-            <img src="" alt="" />
-            <p className={styles.link}>h ttps://github.blog</p>
+            <div className={styles["icon-container"]}>
+              <img src={websiteIcon} alt="Website" />
+            </div>
+            <p className={styles.type}>h ttps://github.blog</p>
           </div>
           <div className={styles["social-type"]}>
-            <img src="" alt="" />
-            <p className={styles.twitter}>Not Available</p>
+            <div className={styles["icon-container"]}>
+              <img src={twitterIcon} alt="Twitter" />
+            </div>
+            <p className={styles.type}>Not Available</p>
           </div>
           <div className={styles["social-type"]}>
-            <img src="" alt="" />
-            <p className={styles.work}>@github</p>
+            <div className={styles["icon-container"]}>
+              <img src={companyIcon} alt="Company" />
+            </div>
+            <p className={styles.type}>@github</p>
           </div>
         </div>
       </div>
