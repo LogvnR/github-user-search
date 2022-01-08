@@ -1,0 +1,25 @@
+.user-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.user-container p {
+  margin: 0 0 0.2em;
+}
+
+.name {
+  color: var(--text1);
+  font-weight: 700;
+  font-size: clamp(15px, 4.3vw, 16px);
+}
+
+.handle {
+  color: var(--main);
+  font-size: clamp(12px, 3.4vw, 13px);
+}
+
+.date-joined {
+  color: var(--text3);
+  font-size: clamp(12px, 3.4vw, 13px);
+}
