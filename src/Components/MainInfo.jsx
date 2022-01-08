@@ -3,22 +3,24 @@ import About from "./UI/About";
 import Social from "./UI/Social";
 import User from "./UI/User";
 
-const MainInfo = () => {
+const MainInfo = (props) => {
   return (
     <main className={styles.container}>
       <div className={styles["main-info"]}>
         <div className={styles["profile-container"]}>
-          <img className={styles["profile-pic"]} src="" alt="" />
-          {/* <div className={styles["profile-pic"]} /> */}
-          <User />
+          <img
+            className={styles["profile-pic"]}
+            src={props.user.picture}
+            alt="Profile Picture"
+          />
+          <User user={props.user} />
         </div>
 
         <p className={styles.description}>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-          Quisque volutpat mattis eros.
+          {props.user.bio ? props.user.bio : "This user has no bio"}
         </p>
-        <About />
-        <Social />
+        <About user={props.user} />
+        <Social user={props.user} />
       </div>
     </main>
   );

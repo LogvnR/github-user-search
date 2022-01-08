@@ -2,8 +2,15 @@ import styles from "../Styles/Social.module.css";
 
 const Social = (props) => {
   return (
+    // = Location Container =
     <div className={`${styles["social-container"]} ${props.className}`}>
-      <div className={styles["social-type"]}>
+      <div
+        className={
+          props.user.location
+            ? styles["social-type"]
+            : `${styles["social-type"]} ${styles.unavailable}`
+        }
+      >
         <div className={styles["icon-container"]}>
           <svg height="20" width="14" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -12,9 +19,18 @@ const Social = (props) => {
             />
           </svg>
         </div>
-        <p className={styles.type}>San Francisco</p>
+        <p className={styles.type}>
+          {props.user.location ? props.user.location : "Not Available"}
+        </p>
       </div>
-      <div className={styles["social-type"]}>
+      {/* = Website Container = */}
+      <div
+        className={
+          props.user.website
+            ? styles["social-type"]
+            : `${styles["social-type"]} ${styles.unavailable}`
+        }
+      >
         <div className={styles["icon-container"]}>
           <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
             <g fill="currentColor">
@@ -23,9 +39,18 @@ const Social = (props) => {
             </g>
           </svg>
         </div>
-        <p className={styles.type}>h ttps://github.blog</p>
+        <p className={styles.type}>
+          {props.user.website ? props.user.website : "Not Available"}
+        </p>
       </div>
-      <div className={styles["social-type"]}>
+      {/* = Twitter Container = */}
+      <div
+        className={
+          props.user.twitter
+            ? styles["social-type"]
+            : `${styles["social-type"]} ${styles.unavailable}`
+        }
+      >
         <div className={styles["icon-container"]}>
           <svg height="18" width="20" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -34,9 +59,18 @@ const Social = (props) => {
             />
           </svg>
         </div>
-        <p className={styles.type}>Not Available</p>
+        <p className={styles.type}>
+          {props.user.twitter ? props.user.twitter : "Not Available"}
+        </p>
       </div>
-      <div className={styles["social-type"]}>
+      {/* = Company Container = */}
+      <div
+        className={
+          props.user.company
+            ? styles["social-type"]
+            : `${styles["social-type"]} ${styles.unavailable}`
+        }
+      >
         <div className={styles["icon-container"]}>
           <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
             <g fill="currentColor">
@@ -44,7 +78,9 @@ const Social = (props) => {
             </g>
           </svg>
         </div>
-        <p className={styles.type}>@github</p>
+        <p className={styles.type}>
+          {props.user.company ? props.user.company : "Not Available"}
+        </p>
       </div>
     </div>
   );
