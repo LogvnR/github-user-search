@@ -12,6 +12,7 @@
   font-family: var(--font);
   font-weight: 700;
   font-size: clamp(24px, 7.2vw, 26px);
+  color: var(--text1);
 }
 
 .theme-container {
@@ -19,6 +20,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.6rem;
+  color: var(--text2);
 }
 
 .title {
@@ -26,7 +28,7 @@
   font-family: var(--font);
   font-weight: 700;
   font-size: clamp(11px, 3.5vw, 13px);
-  color: var(--text2);
+  color: inherit;
   text-transform: uppercase;
   letter-spacing: 2.5px;
 }

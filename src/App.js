@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import useLocalStorage from "use-local-storage";
 import styles from "./App.module.css";
 
 import MainInfo from "./Components/MainInfo";
@@ -9,6 +10,17 @@ import axios from "./Helpers/axios";
 
 const App = () => {
   const [searchUser, setSearchUser] = useState({});
+  const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [theme, setTheme] = useLocalStorage(
+    "theme",
+    defaultDark ? "dark" : "light"
+  );
+
+  const switchTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
+
   useEffect(() => {
     const getData = async () => {
       const res = await axios.get("octocat");
@@ -33,9 +45,9 @@ const App = () => {
   }, []);
 
   return (
-    <div className={styles.app}>
+    <div data-theme={theme} className={styles.app}>
       <div className={styles["app-container"]}>
-        <NavBar />
+        <NavBar switchTheme={switchTheme} theme={theme} />
         <SearchBar setSearchUser={setSearchUser} />
         <MainInfo user={searchUser} />
       </div>

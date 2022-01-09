@@ -33,8 +33,24 @@
   font-size: clamp(12px, 3.4vw, 13px);
   color: inherit;
   opacity: inherit;
+  overflow-wrap: break-word;
+  overflow: hidden;
 }
 
 .unavailable {
   opacity: 0.5;
+}
+
+@media only screen and (min-width: 768px) {
+  .social-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .social-type {
+    width: 50%;
+  }
+
+  .type {
+    font-size: 15px;
+  }
 }

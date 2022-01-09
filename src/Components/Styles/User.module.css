@@ -23,3 +23,19 @@
   color: var(--text3);
   font-size: clamp(12px, 3.4vw, 13px);
 }
+
+@media only screen and (min-width: 768px) {
+  .user-container {
+    justify-content: space-evenly;
+  }
+  .name {
+    font-size: 26px;
+  }
+
+  .handle {
+    font-size: 16px;
+  }
+  .date-joined {
+    font-size: 15px;
+  }
+}

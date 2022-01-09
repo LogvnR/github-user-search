@@ -3,7 +3,7 @@
   max-width: 750px;
   box-sizing: border-box;
   display: flex;
-  padding: 1rem 1.5rem 1.5rem;
+  padding: 0 1.5rem 0;
 }
 
 .main-info {
@@ -26,7 +26,7 @@
 
 .profile-pic {
   width: 70px;
-  height: 70px;
+  height: auto;
   background-color: gray;
   border-radius: 50%;
 }
@@ -37,4 +37,18 @@
   color: var(--text2);
   font-size: clamp(12px, 3.4vw, 13px);
   line-height: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-info {
+    padding: 3rem 2.5rem;
+  }
+
+  .profile-container {
+    gap: 3rem;
+  }
+
+  .profile-pic {
+    width: 117px;
+  }
 }
