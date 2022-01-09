@@ -1,9 +1,12 @@
+import { useState } from "react";
 import styles from "./Styles/SearchBar.module.css";
 
 import searchIcon from "../Assets/icon-search.svg";
 import axios from "../Helpers/axios";
 
 const SearchBar = (props) => {
+  const [validUser, setValidUser] = useState("valid");
+
   const searchUser = (e) => {
     e.preventDefault();
     const user = document.querySelector("input").value;
@@ -27,25 +30,37 @@ const SearchBar = (props) => {
             company: res.data.company,
           };
           props.setSearchUser(userData);
+          setValidUser(true);
           const form = document.querySelector("form");
           form.reset();
         })
         .catch((error) => {
+          setValidUser(false);
           console.log(error);
         });
     };
-    findUser();
+    if (user === "") {
+      setValidUser("null");
+    } else {
+      findUser();
+    }
   };
 
   return (
     <header className={styles.container}>
       <form className={styles["search-bar"]}>
         <img className={styles.icon} src={searchIcon} alt="" />
-        <input
-          className={styles.input}
-          type="text"
-          placeholder="Search GitHub username..."
-        />
+        <div className={styles["input-container"]}>
+          <input
+            className={styles.input}
+            type="text"
+            placeholder="Search GitHub username..."
+          />
+          {validUser === "null" && (
+            <p className={styles.error}>Cannot Be Empty</p>
+          )}
+          {!validUser && <p className={styles.error}>No Results</p>}
+        </div>
         <button onClick={searchUser} className={styles.btn}>
           Search
         </button>
