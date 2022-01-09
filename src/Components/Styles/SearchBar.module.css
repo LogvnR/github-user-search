@@ -13,10 +13,10 @@
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
-  background-color: var(--white);
+  background-color: var(--secondary);
   border-radius: 0.95rem;
-  -webkit-box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.19);
-  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.19);
+  -webkit-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
 }
 
 .icon {
@@ -34,12 +34,14 @@
 
 .input {
   width: 100%;
+  background-color: var(--secondary);
   font-family: var(--font);
   font-size: clamp(12px, 3.4vw, 13px);
   border: none;
   outline: none;
   line-height: 25px;
   color: var(--text2);
+  caret-color: var(--main);
 }
 
 .error {
@@ -77,4 +79,8 @@
   font-weight: 700;
   border: none;
   border-radius: 0.6rem;
+}
+
+.btn:active {
+  background-color: var(--active);
 }

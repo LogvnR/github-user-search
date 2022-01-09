@@ -1,6 +1,10 @@
 @import "./Components/Styles/vars.css";
 @import "./Components/Styles/theme.css";
 
+html {
+  background-color: var(--background);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
