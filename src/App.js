@@ -11,31 +11,32 @@ const App = () => {
   const [searchUser, setSearchUser] = useState({});
   useEffect(() => {
     const getData = async () => {
-      const req = await axios.get("octocat");
+      const res = await axios.get("octocat");
       const userData = {
-        picture: req.data.avatar_url,
-        name: req.data.name,
-        handle: req.data.login,
-        dateJoined: req.data.created_at.slice(0, 10),
-        bio: req.data.bio,
-        repos: req.data.public_repos,
-        followers: req.data.followers,
-        following: req.data.following,
-        location: req.data.location,
-        website: req.data.blog,
-        twitter: req.data.twitter_username,
-        company: req.data.company,
+        picture: res.data.avatar_url,
+        name: res.data.name,
+        handle: res.data.login,
+        dateJoined: res.data.created_at.slice(0, 10),
+        bio: res.data.bio,
+        repos: res.data.public_repos,
+        followers: res.data.followers,
+        following: res.data.following,
+        location: res.data.location,
+        website: res.data.blog,
+        twitter: res.data.twitter_username,
+        company: res.data.company,
       };
       console.log(userData);
       setSearchUser(userData);
     };
     getData();
   }, []);
+
   return (
     <div className={styles.app}>
       <div className={styles["app-container"]}>
         <NavBar />
-        <SearchBar />
+        <SearchBar setSearchUser={setSearchUser} />
         <MainInfo user={searchUser} />
       </div>
     </div>

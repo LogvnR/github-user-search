@@ -8,11 +8,14 @@ const MainInfo = (props) => {
     <main className={styles.container}>
       <div className={styles["main-info"]}>
         <div className={styles["profile-container"]}>
-          <img
-            className={styles["profile-pic"]}
-            src={props.user.picture}
-            alt="Profile Picture"
-          />
+          {!props.user.picture && <div className={styles["profile-pic"]} />}
+          {props.user.picture && (
+            <img
+              className={styles["profile-pic"]}
+              src={props.user.picture}
+              alt="Profile Picture"
+            />
+          )}
           <User user={props.user} />
         </div>
 
