@@ -1,11 +1,11 @@
 import styles from "./Styles/NavBar.module.css";
-import moon from "../Assets/icon-moon.svg";
+import Div from "./UI/Div";
 
 const NavBar = (props) => {
   return (
     <nav className={styles.navbar}>
       <h1>devfinder</h1>
-      <div onClick={props.switchTheme} className={styles["theme-container"]}>
+      <Div onClick={props.switchTheme} className={styles["theme-container"]}>
         <p className={styles.title}>
           {props.theme === "light" ? "dark" : "light"}
         </p>
@@ -29,7 +29,7 @@ const NavBar = (props) => {
             </g>
           </svg>
         )}
-      </div>
+      </Div>
     </nav>
   );
 };

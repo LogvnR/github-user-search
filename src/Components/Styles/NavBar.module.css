@@ -21,6 +21,7 @@
   align-items: center;
   gap: 0.6rem;
   color: var(--text2);
+  cursor: pointer;
 }
 
 .title {
@@ -36,5 +37,10 @@
 @media only screen and (min-width: 1200px) {
   .navbar {
     padding: 1.5rem 1.5rem 0;
+  }
+
+  .theme-container:hover {
+    transition: color 0.25s ease-in-out;
+    color: var(--hover);
   }
 }

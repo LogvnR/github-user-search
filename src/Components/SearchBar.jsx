@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Styles/SearchBar.module.css";
+import { motion } from "framer-motion";
 
 import searchIcon from "../Assets/icon-search.svg";
 import axios from "../Helpers/axios";
@@ -29,6 +30,7 @@ const SearchBar = (props) => {
             twitter: res.data.twitter_username,
             company: res.data.company,
           };
+          console.log(userData);
           props.setSearchUser(userData);
           setValidUser(true);
           const form = document.querySelector("form");
@@ -61,9 +63,14 @@ const SearchBar = (props) => {
           )}
           {!validUser && <p className={styles.error}>No Results</p>}
         </div>
-        <button onClick={searchUser} className={styles.btn}>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={searchUser}
+          className={styles.btn}
+        >
           Search
-        </button>
+        </motion.button>
       </form>
     </header>
   );

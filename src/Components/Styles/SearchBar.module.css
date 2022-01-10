@@ -79,6 +79,8 @@
   font-weight: 700;
   border: none;
   border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .btn:active {
@@ -100,5 +102,11 @@
 
   .btn {
     font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .btn:hover {
+    background-color: var(--active);
   }
 }

@@ -1,10 +1,27 @@
 import styles from "../Styles/Social.module.css";
+import Div from "./Div";
 
 const Social = (props) => {
+  const websiteHandler = () => {
+    if (props.user.website) {
+      window.open(`https://${props.user.website}`);
+    } else {
+      return;
+    }
+  };
+
+  const twitterHandler = () => {
+    if (props.user.twitter) {
+      window.open(`https://twitter.com/${props.user.twitter}`);
+    } else {
+      return;
+    }
+  };
+
   return (
     // = Location Container =
     <div className={`${styles["social-container"]} ${props.className}`}>
-      <div
+      <Div
         className={
           props.user.location
             ? styles["social-type"]
@@ -22,9 +39,10 @@ const Social = (props) => {
         <p className={styles.type}>
           {props.user.location ? props.user.location : "Not Available"}
         </p>
-      </div>
+      </Div>
       {/* = Website Container = */}
-      <div
+      <Div
+        onClick={websiteHandler}
         className={
           props.user.website
             ? styles["social-type"]
@@ -42,9 +60,10 @@ const Social = (props) => {
         <p className={styles.type}>
           {props.user.website ? props.user.website : "Not Available"}
         </p>
-      </div>
+      </Div>
       {/* = Twitter Container = */}
-      <div
+      <Div
+        onClick={twitterHandler}
         className={
           props.user.twitter
             ? styles["social-type"]
@@ -62,9 +81,9 @@ const Social = (props) => {
         <p className={styles.type}>
           {props.user.twitter ? props.user.twitter : "Not Available"}
         </p>
-      </div>
+      </Div>
       {/* = Company Container = */}
-      <div
+      <Div
         className={
           props.user.company
             ? styles["social-type"]
@@ -81,7 +100,7 @@ const Social = (props) => {
         <p className={styles.type}>
           {props.user.company ? props.user.company : "Not Available"}
         </p>
-      </div>
+      </Div>
     </div>
   );
 };
