@@ -18,6 +18,17 @@ const Social = (props) => {
     }
   };
 
+  const companyHandler = () => {
+    if (props.user.company && props.user.company.charAt(0) === "@") {
+      const company = props.user.company.substring(1);
+      window.open(`https://github.com/${company}`);
+    } else if (props.user.company) {
+      window.open(`https://github.com/${props.user.company}`);
+    } else {
+      return;
+    }
+  };
+
   return (
     // = Location Container =
     <div className={`${styles["social-container"]} ${props.className}`}>
@@ -84,6 +95,7 @@ const Social = (props) => {
       </Div>
       {/* = Company Container = */}
       <Div
+        onClick={companyHandler}
         className={
           props.user.company
             ? styles["social-type"]

@@ -27,7 +27,10 @@ const MainInfo = (props) => {
           <User className={styles.user} user={props.user} />
         </div>
 
-        <p className={styles.description}>
+        <p
+          style={props.user.bio ? { opacity: 1 } : { opacity: 0.75 }}
+          className={styles.description}
+        >
           {props.user.bio ? props.user.bio : "This user has no bio"}
         </p>
         <About className={styles.about} user={props.user} />

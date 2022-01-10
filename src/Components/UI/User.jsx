@@ -12,7 +12,9 @@ const User = (props) => {
   const userDate = dateConvert.slice(4, 17);
   return (
     <div className={`${styles["user-container"]} ${props.className}`}>
-      <p className={styles.name}>{props.user.name}</p>
+      <p className={styles.name}>
+        {props.user.name ? props.user.name : props.user.handle}
+      </p>
       <p className={styles.handle}>{`@${props.user.handle}`}</p>
       <p className={styles["date-joined"]}>{`Joined ${userDate}`}</p>
     </div>
