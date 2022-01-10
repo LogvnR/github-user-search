@@ -38,7 +38,6 @@ const App = () => {
         twitter: res.data.twitter_username,
         company: res.data.company,
       };
-      console.log(userData);
       setSearchUser(userData);
     };
     getData();

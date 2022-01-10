@@ -16,6 +16,7 @@
   gap: 0.5rem;
   color: var(--text2);
   opacity: 1;
+  cursor: pointer;
 }
 
 .icon-container {
@@ -39,6 +40,8 @@
 
 .unavailable {
   opacity: 0.5;
+  text-decoration: none !important;
+  cursor: alias;
 }
 
 @media only screen and (min-width: 768px) {
@@ -52,5 +55,17 @@
 
   .type {
     font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .social-type:first-of-type:hover {
+    text-decoration: none;
+    cursor: alias;
+  }
+
+  .social-type:hover {
+    transition: all 0.25s ease-in-out;
+    text-decoration: underline;
   }
 }

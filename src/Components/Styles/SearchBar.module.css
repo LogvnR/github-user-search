@@ -106,7 +106,39 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .btn:hover {
+  .input {
+    cursor: pointer;
+  }
+
+  .btn {
+    position: relative;
+    z-index: 1;
+    transition: 0.4s ease-in;
+  }
+
+  .btn::before,
+  .btn::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    border-radius: 0.6rem;
+  }
+
+  .btn::after {
+    opacity: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    transition-duration: 0.6s;
+    width: 100%;
     background-color: var(--active);
+  }
+
+  .btn:hover::after {
+    height: 100%;
+    opacity: 1;
+  }
+
+  .btn:hover {
   }
 }
