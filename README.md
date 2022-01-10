@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Git Search Lite](https://github-user-search-lite.netlify.app/)
 
 ## My process
 
