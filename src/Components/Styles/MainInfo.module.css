@@ -44,11 +44,58 @@
     padding: 3rem 2.5rem;
   }
 
+  .description {
+    font-size: 15px;
+  }
+
   .profile-container {
     gap: 3rem;
   }
 
   .profile-pic {
     width: 117px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-info {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 1fr;
+    grid-template-rows: 1fr 0.2fr 1fr 1fr;
+    grid-template-areas:
+      "user user user"
+      "photo bio bio"
+      "photo about about"
+      "photo social social";
+  }
+
+  .profile-container {
+    grid-area: user;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 1fr;
+    grid-template-areas: "pic info info";
+    gap: 0.5rem;
+  }
+
+  .profile-pic {
+    grid-area: pic;
+  }
+
+  .user {
+    grid-area: info;
+  }
+
+  .description {
+    grid-area: bio;
+    margin: 0 0 2em;
+    top: -25%;
+  }
+
+  .about {
+    grid-area: about;
+  }
+
+  .social {
+    grid-area: social;
   }
 }

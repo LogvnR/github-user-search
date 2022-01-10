@@ -16,14 +16,14 @@ const MainInfo = (props) => {
               alt="Profile Picture"
             />
           )}
-          <User user={props.user} />
+          <User className={styles.user} user={props.user} />
         </div>
 
         <p className={styles.description}>
           {props.user.bio ? props.user.bio : "This user has no bio"}
         </p>
-        <About user={props.user} />
-        <Social user={props.user} />
+        <About className={styles.about} user={props.user} />
+        <Social className={styles.social} user={props.user} />
       </div>
     </main>
   );

@@ -39,3 +39,26 @@
     font-size: 15px;
   }
 }
+
+@media only screen and (min-width: 1200px) {
+  .user-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 0.2fr);
+    grid-template-areas:
+      "name date"
+      "handle date";
+  }
+  .name {
+    grid-area: name;
+  }
+
+  .handle {
+    grid-area: handle;
+  }
+
+  .date-joined {
+    grid-area: date;
+    justify-self: flex-end;
+  }
+}
