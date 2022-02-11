@@ -1,4 +1,4 @@
-# Frontend Mentor - GitHub user search app solution
+# GitHub user search app solution
 
 ## Table of contents
 
